@@ -44,8 +44,7 @@ model = PPO(
 
 
 # Training and saving models along the way
-# TIMESTEPS = 20000
-TIMESTEPS = 2
+TIMESTEPS = 20000
 for i in range(10):
     print(i)
     model.learn(total_timesteps=TIMESTEPS, reset_num_timesteps=False, tb_log_name="PPO")
