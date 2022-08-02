@@ -1,7 +1,4 @@
 import gym
-import time
-import numpy as np
-import matplotlib.pyplot as plt
 
 env = gym.make("MountainCar-v0")
 print("MoutainCar env")
