@@ -15,7 +15,7 @@ for t in range(1000):
     if done:
         print("Episode finished after {} timesteps".format(t + 1))
 observations = np.array(observations)
-plt.scatter(observations[:, 0], observations[:, 1], alpha=0.3)
+plt.scatter(-observations[:, 0], observations[:, 1], alpha=0.3)
 plt.savefig("observations.png")
 plt.show()
 env.close()
