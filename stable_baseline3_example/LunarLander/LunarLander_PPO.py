@@ -10,14 +10,15 @@ env = gym.make("LunarLander-v2")
 # Instantiate the agent
 model = PPO("MlpPolicy", env, verbose=1)
 # Train the agent
-model.learn(total_timesteps=int(10))
+model.learn(total_timesteps=int(2e6))
 # Save the agent
-#model.save("ppo_lunar2")
+model.save("ppo_lunar2")
 
 # Load the trained agent
 # model = PPO.load("ppo_lunar", env=env)
 
 # Enjoy trained agent
+"""
 obs = env.reset()
 for i in range(2):
     action, _states = model.predict(obs, deterministic=True)
@@ -25,3 +26,4 @@ for i in range(2):
     env.render()
     if dones:
         obs = env.reset()
+"""
